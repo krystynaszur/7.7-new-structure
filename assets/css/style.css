@@ -432,4 +432,53 @@ margin: 50px auto 0 auto;
 #clients img {
   margin: 0 40px;
 }
+
+#contact {
+  background-color: #222222;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+#contact h2 {
+  color: white;
+  margin-top: 110px;
+}
+
+input {
+  width: 80%;
+border: 1px solid #cccccc;
+background-color: #ffffff;
+
+padding-left: 20px;
+color: #bbbbbb;
+font-family: Montserrat;
+font-size: 14px;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: -0.35px;
+border-radius: 5px;
+}
+
+#first-column {
+ display: flex;
+  flex-direction: column;
+  
+}
+#first-column input {
+ height: 56px;
+  margin: 0 auto;
+}
+#second-column input {
+  height: 212px;
+}
+
+#contact button {
+  margin: 27px 0 115px 0;
+}
+#contact img {
+  position: absolute;
+ top: 20%;
+left: 60%;
+}
+
 /*# sourceMappingURL=style.css.map */
