@@ -1,58 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,900");
 @import url("https://fonts.googleapis.com/css?family=Droid+Serif:400");
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
+
+
+@font-face {
+  font-family: "Wisdom - Script";
+  src: url(../fonts/WisdomScriptAJ.otf) format("truetype");
+}
+
+
 [class*="col-"] {
   float: left;
   min-height: 1px;
   margin: 0 auto;
-}
-
-.col-1 {
-  width: 8.33%;
-}
-
-.col-2 {
-  width: 16.66%;
-}
-
-.col-3 {
-  width: 25%;
-}
-
-.col-4 {
-  width: 33.33%;
-}
-
-.col-5 {
-  width: 41.66%;
-}
-
-.col-6 {
-  width: 50%;
-}
-
-.col-7 {
-  width: 58.33%;
-}
-
-.col-8 {
-  width: 66.66%;
-}
-
-.col-9 {
-  width: 75%;
-}
-
-.col-10 {
-  width: 83.33%;
-}
-
-.col-11 {
-  width: 91.66%;
-}
-
-.col-12 {
-  width: 100%;
 }
 
 .col-offset-1 {
@@ -97,11 +58,6 @@
 
 .col-offset-11 {
   margin-left: 91.66%;
-}
-
-@font-face {
-  font-family: "Wisdom - Script";
-  src: url(../fonts/WisdomScriptAJ.otf) format("truetype");
 }
 
 body {
@@ -227,6 +183,13 @@ header ul > li > a {
   margin-bottom: 77px;
 }
 
+section {
+  width: 100%;
+  padding: 120px 0;
+  float: left;
+  text-align: center;
+}
+
 section h2 {
   color: #222222;
   font-family: Montserrat;
@@ -246,9 +209,10 @@ p.subheader {
   letter-spacing: -0.45px;
 }
 
-.services .col-4 {
+.services .col-l-4 {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .services .row {
@@ -256,8 +220,9 @@ p.subheader {
   margin: 0 auto;
 }
 
-.services .col-4 p {
+.services .col-l-4 p {
   margin: 0 28px;
+  max-width: 275px;
 }
 
 .services .icon {
@@ -275,13 +240,6 @@ p.subheader {
   height: 40px;
 }
 
-section {
-  width: 100%;
-  margin: 120px auto;
-  float: left;
-  text-align: center;
-}
-
 .row::before,
 .row::after {
   content: "";
@@ -289,8 +247,14 @@ section {
   display: table;
 }
 
-.portfolio .row {
-  margin: 0 230px;
+.portfolio,
+.team {
+  background-color:#f7f7f7;
+}
+ .portfolio .row,
+ .team .row {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .portfolio img {
@@ -303,14 +267,12 @@ section {
   font-family: Montserrat;
   font-size: 18px;
   font-weight: 700;
-  /* Text style for "E, bony &" */
   letter-spacing: -0.45px;
   margin: 0 auto;
   width: 100%;
 }
 
 .image-description p:nth-child(2) {
-  
   color: #737373;
   font-family: "Droid Serif";
   font-size: 14px;
@@ -325,23 +287,23 @@ section {
 .about .row:last-child {
   margin: 100px calc(264px - 153px) 0 calc(264px - 153px);
 }
+
 .about .row p:first-child,
 .about .row p:nth-child(2) {
-  
-
-color: #222222;
-font-family: Montserrat;
-font-size: 18px;
-font-weight: 700;
-letter-spacing: -0.45px;
-width: 100%;
-margin: 0;
+  color: #222222;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.45px;
+  width: 100%;
+  margin: 0;
 }
+
 .about .row p:first-child {
 text-transform: uppercase;
 }
+
 .about .row p:nth-child(3) {
- 
 color: #777777;
 font-family: "Roboto Slab";
 font-size: 14px;
@@ -349,11 +311,11 @@ font-weight: 400;
 letter-spacing: -0.35px;
 }
  
-.about .row .col-4:first-child p {
+.about .row .col-m-4:first-child p {
   float: right;
   text-align: right;
 }
-.about .row .col-4:nth-child(3) p {
+.about .row .col-m-4:nth-child(2) p {
   float: left;
   text-align: left;
 }
@@ -372,6 +334,7 @@ letter-spacing: -0.35px;
   left: 50%;
   z-index: -1;
 }
+
 #story {
  position: relative;
 }
@@ -391,46 +354,53 @@ section .team {
   margin: 0 calc(309px - 234px/2);
 }
 
-.team .row .col-4 .name {
+.team .row .col-m-4 .name {
   color: #222222;
   font-family: Montserrat;
   font-size: 16px;
   font-weight: 700;
   letter-spacing: -0.4px;
-
 }
-.team .row .col-4 .role {
+
+.team .row .col-m-4 .role {
   color: #777777;
-font-family: "Roboto Slab";
-font-size: 14px;
-font-weight: 400;
-letter-spacing: -0.35px;
+  font-family: "Roboto Slab";
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.35px;
 }
 
 .team i {
   font-size: 25px;
   width: 44px;
-height: 43px;
-line-height: 43px;
-border: 3px solid #222222;
-border-radius: 50%;
+  height: 43px;
+  line-height: 43px;
+  border: 3px solid #222222;
+  border-radius: 50%;
 }
+
 .team #teamstory {
   max-width: 600px;
-color: #777777;
-font-family: "Roboto Slab";
-font-size: 16px;
-font-weight: 400;
-letter-spacing: -0.4px;
-margin: 50px auto 0 auto;
+  color: #777777;
+  font-family: "Roboto Slab";
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.4px;
+  margin: 50px auto 0 auto;
 }
 
 #clients {
-  margin: 60px auto;
   text-align: center;
+  line-height: 160px;
+ padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
+
 #clients img {
-  margin: 0 40px;
+ margin: 0 40px;
+  
 }
 
 #contact {
@@ -439,33 +409,32 @@ margin: 50px auto 0 auto;
   position: relative;
   overflow: hidden;
 }
+
 #contact h2 {
   color: white;
-  margin-top: 110px;
 }
 
 input {
   width: 80%;
-border: 1px solid #cccccc;
-background-color: #ffffff;
-
-padding-left: 20px;
-color: #bbbbbb;
-font-family: Montserrat;
-font-size: 14px;
-font-weight: 700;
-text-transform: uppercase;
-letter-spacing: -0.35px;
-border-radius: 5px;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  padding-left: 20px;
+  color: #bbbbbb;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.35px;
+  border-radius: 5px;
 }
 
 #first-column {
- display: flex;
+  display: flex;
   flex-direction: column;
   
 }
 #first-column input {
- height: 56px;
+  height: 56px;
   margin: 0 auto;
 }
 #second-column input {
@@ -473,40 +442,37 @@ border-radius: 5px;
 }
 
 #contact button {
-  margin: 27px 0 115px 0;
+  margin-top: 27px;
 }
 #contact img {
   position: absolute;
- top: 20%;
-left: 60%;
+  top: 20%;
+  left: 60%;
 }
-
 footer {
   height: 90px;
   float: left;
   width: 100%;
   line-height: 90px;
-  //margin: 0 calc(230px - 255px/2);
 }
 
 footer p {
   color: #555555;
-font-family: Montserrat;
-font-size: 14px;
-font-weight: 400;
-letter-spacing: -0.35px;
-margin: 0 calc(230px - 255px/2);
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.35px;
+  margin-left: calc(230px - 255px/2);
 }
 
 footer i {
   width: 43px;
-height: 44px;
-background-color: #222222;
-margin: 0 5px;
-color: white;
-text-align: center;
-border-radius: 50%;
-font-size: 20px;
+  background-color: #222222;
+  margin: 0 5px;
+  color: white;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 20px;
 }
 footer i:before {
   line-height: 43px;
@@ -516,3 +482,89 @@ footer #socialmedia {
  text-align: center;
  margin: 0 auto;
 }
+
+@media (min-width: 981px) {
+  /* For desktop: */
+  .col-l-1 {width: 8.33%;}
+  .col-l-2 {width: 16.66%;}
+  .col-l-3 {width: 25%;}
+  .col-l-4 {width: 33.33%;}
+  .col-l-5 {width: 41.66%;}
+  .col-l-6 {width: 50%;}
+  .col-l-7 {width: 58.33%;}
+  .col-l-8 {width: 66.66%;}
+  .col-l-9 {width: 75%;}
+  .col-l-10 {width: 83.33%;}
+  .col-l-11 {width: 91.66%;}
+  .col-l-12 {width: 100%;}
+}
+
+@media (max-width: 980px) {
+  .col-m-1 {width: 8.33%;}
+  .col-m-2 {width: 16.66%;}
+  .col-m-3 {width: 25%;}
+  .col-m-4 {width: 33.33%;}
+  .col-m-5 {width: 41.66%;}
+  .col-m-6 {width: 50%;}
+  .col-m-7 {width: 58.33%;}
+  .col-m-8 {width: 66.66%;}
+  .col-m-9 {width: 75%;}
+  .col-m-10 {width: 83.33%;}
+  .col-m-11 {width: 91.66%;}
+  .col-m-12 {width: 100%;}
+
+footer p {
+  margin: 0 auto;
+  text-align: center;
+}
+
+section {
+  padding: 60px 0;
+}
+
+#clients img {
+  padding: 0 30px;
+  margin: 20px auto;
+}
+
+.golden {
+  left: 50px;
+}
+header > ul > li {
+  display: block;
+  padding-right: 40px;
+}
+.jumbotron {
+  height: calc(100vh - 300px);
+  padding: 0 30px;
+}
+.portfolio .row::before,
+.portfolio .row::after {
+  content: "";
+  display: flex;
+  clear: none;
+}
+}
+
+@media (max-width:767px) {
+  .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+
+    .services .icon {
+      margin-top: 30px;
+    }
+
+    .col-offset-4 {
+      margin-left: 0;
+    }
+  }
