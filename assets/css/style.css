@@ -320,4 +320,72 @@ section {
   display: block;
 }
 
+.about .row {
+  margin: 0 calc(264px - 153px) 100px calc(264px - 153px);
+}
+.about .row p:first-child,
+.about .row p:nth-child(2) {
+  width: 175px;
+
+color: #222222;
+font-family: Montserrat;
+font-size: 18px;
+font-weight: 700;
+/* Text style for "D, ecember" */
+letter-spacing: -0.45px;
+width: 100%;
+margin: 0;
+}
+.about .row p:first-child {
+text-transform: uppercase;
+}
+.about .row p:nth-child(3) {
+  width: 306px;
+height: 79px;
+color: #777777;
+font-family: "Roboto Slab";
+font-size: 14px;
+font-weight: 400;
+/* Text style for "P, roin ia" */
+letter-spacing: -0.35px;
+}
+ 
+.about .row .col-4:first-child p {
+  float: right;
+  text-align: right;
+}
+.about .row .col-4:nth-child(3) p {
+  float: left;
+  text-align: left;
+}
+
+.line {
+  height: 100%;
+  position:relative;
+}
+ .line::after {
+  content: '';
+  width: 0;
+  height: 100%;
+  position: absolute;
+  border: 2px solid #f1f1f1;;
+  
+  top: 0;
+  left: 50%;
+  z-index: -1;
+}
+#story {
+  
+ position: relative;
+}
+#story p {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 2;
+  color: white;
+  max-width: 170px;
+  text-align: center;
+}
 /*# sourceMappingURL=style.css.map */
