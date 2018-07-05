@@ -480,5 +480,39 @@ border-radius: 5px;
  top: 20%;
 left: 60%;
 }
+footer {
+  height: 90px;
+  float: left;
+  width: 100%;
+  line-height: 90px;
+  //margin: 0 calc(230px - 255px/2);
+}
 
+footer p {
+  color: #555555;
+font-family: Montserrat;
+font-size: 14px;
+font-weight: 400;
+letter-spacing: -0.35px;
+margin: 0 calc(230px - 255px/2);
+}
+
+footer i {
+  width: 43px;
+height: 44px;
+background-color: #222222;
+margin: 0 5px;
+color: white;
+text-align: center;
+border-radius: 50%;
+font-size: 20px;
+}
+footer i:before {
+  line-height: 43px;
+}
+
+footer #socialmedia {
+ text-align: center;
+ margin: 0 auto;
+}
 /*# sourceMappingURL=style.css.map */
