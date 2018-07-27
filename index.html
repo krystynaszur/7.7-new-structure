@@ -2,7 +2,7 @@
 <html>
 
 <head>
-        <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1">
+    <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>Design studio</title>
 
@@ -13,27 +13,33 @@
 
 <body>
     <header>
-        <span class="golden">Golden</span>
-        <ul>
-            <li>
-                <a href="#">Home</a>
-            </li>
-            <li>
-                <a href="#">Portfolio</a>
-            </li>
-            <li>
-                <a href="#">Services</a>
-            </li>
-            <li>
-                <a href="#">About</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li>
-        </ul>
+        <div class="top-bar">
+            <span class="golden">Golden</span>
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn">
+                <span class="navicon"></span>
+            </label>
+            <ul class="menu">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
         <div class="jumbotron">
-            <h2>Welcome to our studio!</h2>
-            <h1>It's nice to meet you</h1>
+            <p class="first-line">Welcome to our studio!</p>
+            <p class="second-line">It's nice to meet you</p>
             <button>Tell me more</button>
         </div>
 
@@ -132,8 +138,8 @@
         <h2>ABOUT US</h2>
         <p class="subtitle">Proin iaculis purus consequat sem cure. </p>
         <div class="line">
-            <div class="row">
-                <div class="col-l-4 col-m-4 col-s-6">
+            <div class="row text-left">
+                <div class="col-l-4 col-m-4 col-s-12 description">
                     <p>July 2010
                     </p>
                     <p> Our Humble Beginnings
@@ -141,16 +147,16 @@
                     <p>Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere
                         odio in tincidunt. Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit.</p>
                 </div>
-                <div class="col-l-4 col-m-4 col-s-6">
+                <div class="col-l-4 col-m-4 col-s-12">
                     <img class="object-fit_cover" src="assets/images/about1.png" alt="">
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-offset-4 col-l-4 col-m-4 col-s-6">
+            <div class="row ">
+                <div class=" col-l-4 col-m-4 col-s-12 text-right">
                     <img class="object-fit_cover" src="assets/images/about2.png" alt="">
                 </div>
-                <div class="col-l-4 col-m-4 col-s-6">
+                <div class="col-l-4 col-m-4 col-s-12 description">
                     <p>January 2011 </p>
                     <p>Facing Startup Battles
 
@@ -161,15 +167,15 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-l-4 col-m-4 col-s-6">
+            <div class="row text-left">
+                <div class="col-l-4 col-m-4 col-s-12 description">
                     <p>December 2012</p>
                     <p> Enter The Dark Days
                     </p>
                     <p>Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere
                         odio in tincidunt. Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit.</p>
                 </div>
-                <div class="col-l-4 col-m-4 col-s-6">
+                <div class="col-l-4 col-m-4 col-s-12">
 
                     <img class="object-fit_cover" src="assets/images/about3.png" alt="">
 
@@ -179,7 +185,7 @@
 
             <div class="row">
 
-                <div class="col-offset-4 col-l-4 col-m-4 col-s-12" id="story">
+                <div class="col-l-4 col-m-4 col-s-12" id="story">
                     <p>Our
                         <br> Story
                         <br> Continues
@@ -244,7 +250,7 @@
         <p class="subtitle">Proin iaculis purus consequat sem cure. </p>
         <form action="/action_page.php">
             <div class="row">
-                <div class="col-l-6 col-m-6 col-s-6" id="first-column">
+                <div class="col-l-6 col-m-6 col-s-12" id="first-column">
                     <input type="text" name="firstname" placeholder="YOUR NAME*">
                     <br>
 
@@ -253,7 +259,7 @@
                     <input type="text" name="subject" placeholder="SUBJECT">
                     <br>
                 </div>
-                <div class="col-l-6 col-m-6 col-s-6" id="second-column">
+                <div class="col-l-6 col-m-6 col-s-12" id="second-column">
                     <input type="text" name="comment" placeholder="YOUR MESSAGE*">>
                     <br>
                 </div>
