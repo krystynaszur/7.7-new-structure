@@ -6,7 +6,6 @@
   src: url(../fonts/WisdomScriptAJ.otf) format("truetype");
 }
 
-
 [class*="col-"] {
   float: left;
   min-height: 1px;
@@ -37,8 +36,8 @@ header::after {
 }
 
 .top-bar {
-  height: 250px; 
- }
+  height: 250px;
+}
 
 .golden {
   position: absolute;
@@ -53,7 +52,6 @@ header::after {
   z-index: 2;
 }
 
-
 .menu-icon {
   cursor: pointer;
   display: inline-block;
@@ -64,7 +62,7 @@ header::after {
   z-index: 6;
 }
 
- .menu-icon .navicon {
+.menu-icon .navicon {
   background: #fed136;
   display: block;
   height: 4px;
@@ -74,9 +72,9 @@ header::after {
   z-index: 6;
 }
 
- .menu-icon .navicon:before,
- .menu-icon .navicon:after {
-  background:  #fed136;
+.menu-icon .navicon:before,
+.menu-icon .navicon:after {
+  background: #fed136;
   content: '';
   display: block;
   height: 100%;
@@ -86,7 +84,7 @@ header::after {
   z-index: 6;
 }
 
- .menu-icon .navicon:before {
+.menu-icon .navicon:before {
   top: 10px;
 }
 
@@ -95,7 +93,7 @@ header::after {
 }
 
 .menu-btn,
- .menu-icon  {
+.menu-icon {
   display: none;
 }
 
@@ -293,6 +291,7 @@ p.subheader {
 .about .text-right {
   margin-left: 33.33%;
 }
+
 .about .row:last-child {
   margin: 100px calc(264px - 153px) 0 calc(264px - 153px);
 }
@@ -539,7 +538,6 @@ footer #socialmedia {
   .col-l-12 {
     width: 100%;
   }
-
 }
 
 @media (max-width: 980px) {
@@ -599,15 +597,12 @@ footer #socialmedia {
 }
 
 @media (max-width: 767px) {
-
   .jumbotron .first-line {
     font-size: 25px;
   }
-
   .jumbotron .second-line {
     font-size: 50px;
   }
-
   .col-s-1 {
     width: 8.33%;
   }
@@ -644,93 +639,79 @@ footer #socialmedia {
   .col-s-12 {
     width: 100%;
   }
-
   .services .icon {
     margin-top: 30px;
   }
-
-  .menu-icon  {
+  .menu-icon {
     display: block;
     right: 10px;
     position: absolute;
   }
-
-   .menu li {
+  .menu li {
     display: block;
   }
-
-   .menu {
+  .menu {
     display: none;
   }
-
- .menu-btn:checked ~ .menu {
-  display: block;
-  z-index: 5;
-  position: relative;
+  .menu-btn:checked ~ .menu {
+    display: block;
+    z-index: 5;
+    position: relative;
+  }
+  .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+  header ul {
+    margin: 20px 20px 0 0;
+  }
+  header ul li {
+    line-height: 30px;
+  }
+  .about .row .description {
+    background-color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin: 20px auto;
+  }
+  .about .row .description:first-child p,
+  .about .row .description:nth-child(2) p {
+    float: none;
+    text-align: center;
+  }
+  .about .text-left {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .about .text-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+  }
 }
- .menu-btn:checked ~ .menu-icon .navicon {
-  background: transparent;
-}
-
- .menu-btn:checked ~ .menu-icon .navicon:before {
-  transform: rotate(-45deg);
-}
-
- .menu-btn:checked ~ .menu-icon .navicon:after {
-  transform: rotate(45deg);
-}
-
-.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
-  top: 0;
-}
-
-header ul {
-  margin: 20px 20px 0 0;
-}
-
-header ul li {
-  line-height: 30px;
-}
-
-.about .row .description {
-  background-color: white;
-  padding: 10px 0;
-  text-align: center;
-  margin: 20px auto;
-}
-
-.about .row .description:first-child p,
-.about .row .description:nth-child(2) p {
- float: none;
- text-align: center;
-}
-
-.about .text-left {
-  display: flex;
-  flex-direction: column-reverse;
-}
-
-.about .text-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-left: 0;
-} 
-
-}
-
 
 @media (max-height: 640px) {
   .jumbotron .first-line {
     margin: 10px 10vw;
     font-size: 25px;
   }
-
-  .jumbotron .second-line  {
+  .jumbotron .second-line {
     margin: 10px 0;
     font-size: 45px;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
+
 /*# sourceMappingURL=style.css.map */
