@@ -34,10 +34,11 @@ header::after {
   right: 0;
   position: absolute;
   z-index: 1;
+  height: 100vh;
 }
 
 .top-bar {
-  height: 250px; 
+  height: 230px; 
  }
 
 .golden {
@@ -126,7 +127,7 @@ header ul > li {
   font-style: italic;
   letter-spacing: -1px;
   font-weight: normal;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .jumbotron .second-line {
@@ -136,12 +137,12 @@ header ul > li {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: -1.88px;
-  margin: 50px 0;
+  margin: 50px auto;
 }
 
 .jumbotron {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   height: calc(100vh - 250px);
   text-align: center;
@@ -163,6 +164,7 @@ button {
   font-weight: 700;
   text-transform: uppercase;
   border-radius: 5px;
+  margin: 0 auto;
 }
 
 header ul > li > a {
@@ -206,7 +208,7 @@ section h2 {
   margin: 0 auto;
 }
 
-p.subheader {
+.services h3 {
   font-family: Montserrat;
   font-size: 18px;
   font-weight: 700;
@@ -297,8 +299,7 @@ p.subheader {
   margin: 100px calc(264px - 153px) 0 calc(264px - 153px);
 }
 
-.about .row p:first-child,
-.about .row p:nth-child(2) {
+.about .row h3 {
   color: #222222;
   font-family: Montserrat;
   font-size: 18px;
@@ -308,11 +309,11 @@ p.subheader {
   margin: 0;
 }
 
-.about .row p:first-child {
+.about .row h3 time {
   text-transform: uppercase;
 }
 
-.about .row p:nth-child(3) {
+.about .row .company-history {
   color: #777777;
   font-family: "Roboto Slab";
   font-size: 14px;
@@ -320,12 +321,14 @@ p.subheader {
   letter-spacing: -0.35px;
 }
 
-.about .row .col-m-4:first-child p {
+.about .row .col-m-4:first-child p,
+.about .row .col-m-4:first-child h3 {
   float: right;
   text-align: right;
 }
 
-.about .row .col-m-4:nth-child(2) p {
+.about .row .col-m-4:nth-child(2) p,
+.about .row .col-m-4:nth-child(2) h3 {
   float: left;
   text-align: left;
 }
@@ -353,18 +356,22 @@ p.subheader {
 }
 
 #story p {
-  top: 50%;
+  top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -40%);
   position: absolute;
   z-index: 2;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 700;
   color: white;
   max-width: 170px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 section .team {
-  margin: 0 calc(309px - 234px/2);
+  padding: 0 5px;
 }
 
 .team .row .col-m-4 .name {
@@ -400,6 +407,7 @@ section .team {
   font-weight: 400;
   letter-spacing: -0.4px;
   margin: 50px auto 0 auto;
+  padding: 0 5px;
 }
 
 #clients {
@@ -584,7 +592,7 @@ footer #socialmedia {
     text-align: center;
   }
   section {
-    padding: 60px 0;
+    padding: 60px 5px;
   }
   #clients img {
     padding: 0 30px;
@@ -700,10 +708,13 @@ header ul li {
   margin: 20px auto;
 }
 
-.about .row .description:first-child p,
-.about .row .description:nth-child(2) p {
- float: none;
- text-align: center;
+.about .row .col-m-4:first-child p,
+.about .row .col-m-4:first-child h3,
+.about .row .col-m-4:nth-child(2) p,
+.about .row .col-m-4:nth-child(2) h3
+ {
+  float: none;
+  text-align: center;
 }
 
 .about .text-left {
@@ -721,15 +732,37 @@ header ul li {
 
 }
 
+@media (max-width: 480px) {
+  .company-history {
+    width: 80vw;
+    margin: 0 auto;
+    }
+
+  .about .row,
+  .about .row:last-child {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 360px) {
+  .portfolio img {
+    margin: 15px 0;
+  }
+
+.company-history {
+    width: 90vw;
+  }
+}
+
 
 @media (max-height: 640px) {
   .jumbotron .first-line {
-    margin: 10px 10vw;
+    margin: 10px auto;
     font-size: 25px;
   }
 
   .jumbotron .second-line  {
-    margin: 10px 0;
+    margin: 10px auto;
     font-size: 45px;
   }
 }
